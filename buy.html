@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ðặt hàng</title>
+	<meta charset="utf-8">
+	<style type="text/css" media="screen">
+		.container{
+			display: grid;
+			grid-template-areas: 'header header header header'
+			'top top top top'
+			'content content content content'
+			'table table table table'
+			'footer footer footer footer'
+		}
+		.header{
+			background-color: white;
+			grid-area: header;
+			height: 190px;
+			padding: 30px 300px;
+		}
+		.top{
+			background-color: #8fae1b;
+			grid-area: top;
+		}
+		.content{
+			position: absolute;
+			margin-left: 300px;
+			grid-area: content;
+		}
+		.content p{
+			position: absolute;
+			margin-left: 0px;
+		}
+		.table{
+			position: absolute;
+			grid-area: table;
+			margin-left: 300px;
+			margin-top: 200px;
+
+
+		}
+		.footer{
+			position: absolute;
+			margin-top: 400px;
+			margin-left: 800px;
+			
+			grid-area: footer;
+
+
+		}
+		.flex{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.logo{
+			flex-grow: 1
+		}
+		.VanChuyen{
+			flex-grow: 1
+		}
+		.bt1{
+			color: orange;
+			border: 1px solid orange
+			background-color orange;
+			border-radius: 5px;
+			font-size: 30px;
+
+		}
+		.menungang a{
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 10px;
+			text-decoration: none;
+			font-size: 30px;
+		}
+		.menungang a:hover{
+			background-color: #a88132; 
+		}
+		.thongbao{
+			display: flex;
+			justify-content: space-between;
+			width: 1100px;
+			height: 60px;
+			background-color: #d4dac5;
+			border-top: 2px solid #80bb35;
+		}
+		.btn-thongbao{
+			position: relative;
+			right: 1cm;
+			top: 0.5cm;
+		}
+		.table th,td{
+			width: 150px;
+			height: 30px;
+		}
+
+		.table2 th, td{
+			width: 300px;
+			height: 30px;
+			margin-left: 80%;
+			text-align: left;
+
+		}
+		.dathang_thanhtoan .form_dathang_r input {
+			background: green;
+			/* border-radius: 0px; */
+			width: 100%;
+			font-family: arial !important;
+			font-size: 15px;
+			padding: 10px 0px;
+			height: 35px;
+			font-weight: normal;
+			border-radius: 4px !important;
+			transition: all 0.1s;
+			-webkit-appearance: none;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="flex">
+				<div class="logo">
+					<img src="http://at01.chonweb.vn/wp-content/uploads/2019/07/logo-halinkvn.png">
+				</div>
+				<center><img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/policy1-0x0.png" height="30px"></center>
+				<div class="VanChuyen">
+					<b>Miễn phí v?n chuy?n</b>
+					<br>
+					Bán kính 5 km
+				</div>
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/policy2-0x0.png" height="30px">
+				<div class="VanChuyen">
+					<b>Hỗ trợ 24/7</b>
+					<br>Hotline: 0366.90.80.87
+				</div>
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2018/12/policy3-0x0.png" height="30px">
+				<div class="VanChuyen">
+					<b>Giờ làm việc</b>
+					<br>6h00-22h00 (T2-CN)
+				</div>
+				<button class="bt1">Giỏ hàng</button>
+			</div>
+		</div>
+
+	</div>
+	<div class="top">
+		<div class="menungang">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#">Trang chủ</a>
+			<a href="#">Giới thiệu</a>
+			<a href="#">Sản phẩm</a>
+			<a href="#">Tin tức</a>
+			<a href="file:///C:/Users/tien.nguyen/BtWeb/HTML/datmua.html">Ðặt hàng</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Search..." name="search" style="padding-right: 120px"  >	
+		</div>
+	</div>
+	<div class="content">
+		<br>
+		<br>
+		<h1>Giỏ hàng</h1>
+		<div class="thongbao">
+			<div>	
+				<p> "Nho mỹ" dã được thêm vào giỏ hàng</p>
+			</div>
+			<div class="btn-thongbao">
+				<a href="../HTML/demo.html"><button>Tiếp tục xem sản phẩm</button></a>
+			</div>
+		</div>
+	</div>
+	<br>
+	<table class="table" border="1">
+		<tr>
+			<th></th>
+			<th></th>
+			<th>Sản phẩm</th>
+			<th>Giá</th>
+			<th>Số lượng</th>
+			<th>Tổng</th>		
+		</tr>
+		<tr>
+			<td><center><img src="https://image.flaticon.com/icons/svg/291/291202.svg" width="30px" height="30px" id="table" onclick="Delete()"></center></td>
+			<td><center>
+				<img src="http://at01.chonweb.vn/wp-content/uploads/2019/07/17.5-fresh-fruit-3-300x300.png" width="50px"height="50px">
+			</center>
+		</td>
+		<td><center>Cam mỹ</center></td>
+		<td><center>150.000d</center></td>
+		<td><center>
+			<input  onchange="getTotal()" type="number" name="soluong" min ="1" max="100" value="1" id ="text_1"> </center> 
+		</td>
+		<td><center><span id="cam">150.000</span>d</center></td>	
+	</tr>
+	<tr>
+		<td><center><img src="https://image.flaticon.com/icons/svg/291/291202.svg" width="30px" height="30px"></center></td>
+		<td><center>
+			<img src="http://at01.chonweb.vn/wp-content/uploads/2019/07/nho-600x600.png" width="50px" height="50px"></center>
+		</td>
+		<td><center>Nho Mỹ</center></td>
+		<td><center>150.000d</center></td>
+		<td><center>
+			<input onchange="getTotal()" type="number" name="soluong" min="1" max="100" id="text_2" value="1">
+		</center></td>
+		<td><center><span id="nho">150.000</span>d</center></td>
+	</tr>
+</table>
+<div class="footer">
+	<div>
+		<h3 >Cộng giỏ hàng</h3>
+	</div>
+	<table class="table2" border="1">
+		<tr>
+			<th>Tạm tính: </th>
+		</tr>
+		<tr>
+			<th>Tổng:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="cam">150.000</span>d</th>
+		</tr>
+	</table>
+	<div class="dathang_thanhtoan">
+		<div class="form_dathang_l"></div>
+		<div class="form_dathang_r">
+			<a href="../HTML/dathangnho.html"><input type="submit" value="Tiến hành thanh toán" class="check_form" id="submit_dathang" onclick="submit_frm_dathang(this);"></a>
+		</div>
+	</div>
+</div>
+</div>
+<script>
+	function Delete() {
+		var x = document.getElementById("table");
+		x.deleteRow(1);
+	}
+	function getTotal()
+	{
+		var value1 = document.getElementById('text_1').value;
+		var total1 = 0;
+		total1 = 150000 * value1;  
+		document.getElementById("cam").innerHTML = total1;
+
+		var value2 = document.getElementById('text_2').value;
+		var total2 = 0;
+		total2 = 150000 * value2;  
+		document.getElementById("nho").innerHTML = total2;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đặt mua hàng</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/dathangnho.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2><b>Đặt mẫu mua : AT01</b></h2>
+	<div class="t1">
+		<div class="t1-1">
+			<h3><span>1</span>Nhập thông tin khách hàng</h3>
+			<input type="text" name="text" placeholder="Họ và tên"><br><br>
+			<input type="text" name="text"
+			placeholder="Điện thoại"><br><br>
+			<input type="email" name="email" placeholder="Email"><br><br>
+			<input type="text" name="text"placeholder="Địa chỉ"><br><br>
+			<input type="text" name="text"placeholder="Ghi chú">
+		</div>
+		<div class="t1-2">
+			<h3><span>2</span>Chọn hình thức thanh toán</h3>
+             
+              <select id="selectCard" onchange="card()">
+                  <option value="1">Internet Banking/ATM nội địa (giảm 5%)</option>
+                  <option value="2">Visa/MasterCard/JCB (giảm 10%)</option>
+                  <option value="3">Chuyển khoản 100% (giảm 15%)</option>
+                  <option value="4">Chuyển khoản trước 50%</option>
+                  <option value="5">Trả tiền mặt tại văn phòng</option>
+              </select>
+              <p id="text_card">Thanh toán online bằng Internet Banking hoặc thẻ ATM nội địa để được giảm giá ngay <span style="color: red; font-weight: bold;">5%</span>, hỗ trợ tất cả ngân hàng, thanh toán an toàn qua cổng VTCPay.</p>
+          </div>
+		<div class="t1-3">
+			<h3><span>3</span>Xem lại đơn hàng</h3>
+			<div class="tt_thanhtoan">
+				<div class="web_thanhtoan">
+					<div class="ct_left">
+						<img src="../Image/dinhkem.jpg" width="50px" height="50px">
+						<span class="title">Mẫu AT01</span>
+					</div>
+					<div class="ct_right">
+						<span class="title" id="gia_goc">2.800.000</span>
+						<input hidden type="text" name="GiaGocWebSite" value="2.800.000đ">
+					</div>
+				</div>
+				<div class="web_thanhtoan" id="enter_magiamgia">
+					<div class="ct_list">
+						<span class="title"id="enter">
+							<b>Nhập mã giảm giá</b>
+							" >> "
+						</span>
+					</div>
+					<div class="ct_list" id="magiamgia">
+						<div id="magiamgia" style="display: none;">
+							<input type="text" id="magiamgia_id" name="magiamgia_name" placeholder="Nhập mã giảm giá">
+							<span id="apdungma">
+								Áp dụng 
+							</span>
+						</div>
+						<div class="alert_message" id="alert_magiamgia"></div>
+					</div>
+				</div>
+				<div class="web_thanhtoan">
+					<div class="ct_list">
+						<div class="ct_left">
+							<span class="title">
+								Tạm tính
+							</span>
+						</div>
+						<div class="ct_right">
+							<span class="title" id="giagoc">
+								2.800.000đ
+							</span>
+						</div>
+					</div>	
+					<div class="ct_list">
+						<div class="ct_left">
+							<span class="title">Giảm giá</span>
+						</div>
+						<div class="ct_right">
+							<span class="title" id="total_giamgia">140.000 đ</span>
+						</div>
+					</div>
+				</div>
+				<div class="web_thanhtoan">
+					<div class="ct_list">
+						<div class="ct_left">
+							<span class="title">Tổng cộng:</span>
+						</div>
+						<div class="ct_rigth">
+							<span class="title" id="tong_thanhtoan">2.660.000 đ</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dathang_thanhtoan">
+				<div class="form_dathang_l"></div>
+				<div class="form_dathang_r">
+					<input type="submit" value="Đặt hàng" class="check_form" id="submit_dathang" onclick="submit_frm_dathang(this);">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		
+
+function card(){
+
+var e = document.getElementById("selectCard");
+var result = e.options[e.selectedIndex].value;
+var arrayText=[];
+arrayText[0] ="Thanh toán online bằng Internet Banking hoặc thẻ ATM nội địa để được giảm giá ngay <span style=\"color: red; font-weight: bold;\">5%</span>, hỗ trợ tất cả ngân hàng, thanh toán an toàn qua cổng VTCPay.";
+arrayText[1] = "Thanh toán online bằng thẻ quốc tế Visa/MasterCard/JCB để được giảm giá ngay <span style=\"color: red; font-weight: bold;\">10%</span> thanh toán an toàn qua cổng VTCPay.";
+arrayText[2] = "Sau khi đặt hàng quý khách sẽ chuyển khoản trước 100% đơn hàng để được giảm ngay <span style=\"color: red; font-weight: bold;\">15%</span> và số tiền cần thanh toán chỉ còn <span style=\"color: red; font-weight: bold;\">100.000đ</span> . Vui lòng xem hướng dẫn thanh toán ngay sau bước đặt hàng."
+arrayText[3] = "Sau khi đặt hàng quý khách sẽ chuyển khoản ngân hàng trước 50% tương ứng với <span style=\"color: red; font-weight: bold;\">100.000đ</span> và thanh toán phần còn lại sau khi chúng tôi hoàn thành bàn giao website. Vui lòng xem hướng dẫn thanh toán ngay sau bước đặt hàng."
+arrayText[4] ="Sau khi đặt hàng quý khách vui lòng đến văn phòng công ty Halink để thanh toán đơn hàng.</p><br> <p>CÔNG TY TNHH TM DV HALINK <br>Địa chỉ: 6 Phan Chu Trinh, P. Tân Thành, Q. Tân Phú, TP.HCM <br>Điện thoại: 096.698.1085 - 090.635.1080"
+
+var  unitPirce= [];
+unitPirce[0]=120000;
+unitPirce[1]=150000;
+unitPirce[2]=150000;
+
+var tam = unitPirce[0]+unitPirce[1]+unitPirce[2];
+var sale = 0 ;
+var total = 0;
+if(result==1) {
+sale = tam*(5/100);
+total = tam - sale;
+document.getElementById("tam").innerHTML = tam;
+document.getElementById("total").innerHTML = total;
+document.getElementById("sale").innerHTML = sale;
+document.getElementById("text_card").innerHTML = arrayText[0];
+}
+if(result==2) {
+sale = tam*(10/100);
+total = tam - sale;
+document.getElementById("tam").innerHTML = tam;
+document.getElementById("total").innerHTML = total;
+document.getElementById("sale").innerHTML = sale;
+document.getElementById("text_card").innerHTML = arrayText[1];
+}
+if(result==3) {
+sale = tam*(15/100);
+total = tam - sale;
+document.getElementById("tam").innerHTML = tam;
+document.getElementById("total").innerHTML = total;
+document.getElementById("sale").innerHTML = sale;
+document.getElementById("text_card").innerHTML = arrayText[2];
+}
+if(result==4) {
+total = tam - sale;
+document.getElementById("tam").innerHTML = tam;
+document.getElementById("total").innerHTML = total;
+document.getElementById("sale").innerHTML = sale;
+document.getElementById("text_card").innerHTML = arrayText[3];
+}
+if(result==5) {
+total = tam - sale;
+document.getElementById("tam").innerHTML = tam;
+document.getElementById("total").innerHTML = total;
+document.getElementById("sale").innerHTML = sale;
+document.getElementById("text_card").innerHTML = arrayText[4];
+}
+
+}
+
+	</script>
+</body>
+</html>
