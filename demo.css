@@ -1,0 +1,86 @@
+.flex-container{
+        display: flex;
+        font-size: 17px;
+        list-style-type: none;
+        color: black;
+    }
+.top{
+        background-color: #80BB35;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+.nav{
+        background-color: #0080C0;
+    }
+.nav>li{
+        float: left;
+        margin-right: 15px;
+    }
+     
+.nav>li>a{
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+    }
+ 
+.nav li{
+        position: relative;
+    }
+ 
+.nav li a{
+        padding: 10px;
+        line-height: 20px;
+        display: inline-block;
+        list-style-type: none;
+    }
+
+body{
+        font-size: 13px;
+        color: white;
+    }
+.main{
+        margin-top: 30px;
+        display: flex;
+    }
+.danhmucsp{
+        background-color: #80bb35;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-left: 30px;
+        height: 30px;
+    }
+.food{
+        margin-top: 30px;
+    }
+.hoaquank{
+        background-color: #80bb35;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-left: 30px;
+        height: 30px;
+        width: 200px;
+        height: 30px;
+        align-self: 10px;
+    }
+.hoaqua{
+        color: black;
+        font-size: 17px;
+        display: flex;
+        margin-left: 10px;
+        float: left;
+        margin-top: 70px;
+    }
+
+.nhomy  img{
+        width: 300px;
+        height: 300px;
+    } 
+a{
+    list-style-type: none;
+}

@@ -1,0 +1,11 @@
+.menu0{
+    display: flex;
+    font-size: 17px;
+}
+.text{
+	height: 500px;
+	width: 500px;
+}
+mark{
+	color: yellow;
+}
